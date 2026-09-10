@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
+import Header from "../components/header";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${barlowCondensed.variable} ${geist.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
