@@ -1,4 +1,3 @@
-import { ImageIcon } from "lucide-react";
 import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
@@ -64,7 +63,7 @@ const HeroSection = () => {
               <Image
                 fill
                 preload
-                src="/hero.webp"
+                src="/images/hero/featured.webp"
                 alt="BOMX custom motorcycle at a competition event"
                 sizes="(min-width: 1024px) 54vw, 100vw"
                 className="object-cover"
