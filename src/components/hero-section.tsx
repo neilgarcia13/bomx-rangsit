@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
@@ -18,24 +17,20 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-muted-foreground mt-6 max-w-md text-base leading-7 sm:text-lg">
-            Explore BOMX parts for drag, circuit, daily, and show builds.
+            For every journey, BOMX has your back. Explore authentic parts for drag, circuit, daily, and show builds.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/products"
-              className={cn(buttonVariants({ size: "lg" }), "h-11 px-5 uppercase")}
-            >
-              Shop Products
+            <Link href="/products">
+              <Button size="lg" className="h-11 px-5 uppercase cursor-pointer">
+                Shop Products
+              </Button>
             </Link>
-            <Link
-              href="/#find-your-parts"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "h-11 px-5 uppercase",
-              )}
-            >
-              Find Your Parts
+
+            <Link href="#find-your-parts">
+              <Button size="lg" variant="outline" className=" h-11 px-5 uppercase cursor-pointer">
+                Find Your Parts
+              </Button>
             </Link>
           </div>
         </div>

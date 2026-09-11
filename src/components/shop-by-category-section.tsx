@@ -50,20 +50,9 @@ const ShopByCategorySection = () => {
               id="collections-heading"
               className="font-display text-foreground max-w-2xl text-4xl tracking-tight uppercase sm:text-5xl lg:text-6xl"
             >
-              Find the parts your build needs.
+              Specificity is key.
             </h2>
           </div>
-
-          <Link
-            href="/products"
-            className="group/view-all text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-card hidden shrink-0 items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none sm:inline-flex"
-          >
-            View All Products
-            <ArrowUpRight
-              aria-hidden="true"
-              className="size-4 transition-transform group-hover/view-all:translate-x-0.5 group-hover/view-all:-translate-y-0.5"
-            />
-          </Link>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:auto-rows-56 lg:grid-cols-12">
@@ -127,14 +116,6 @@ const ShopByCategorySection = () => {
             </Link>
           ))}
         </div>
-
-        <Link
-          href="/products"
-          className="text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-card mt-7 inline-flex items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none sm:hidden"
-        >
-          View All Products
-          <ArrowUpRight className="size-4" />
-        </Link>
       </div>
     </section>
   );
