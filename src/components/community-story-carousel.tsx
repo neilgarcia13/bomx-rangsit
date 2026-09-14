@@ -34,13 +34,13 @@ const CommunityStoryCarousel = ({ stories }: CommunityStoryCarouselProps) => {
           <CarouselItem key={story.title} className="pl-0">
             <article className="border-border bg-card grid overflow-hidden rounded-xl border lg:grid-cols-2">
               <div className="bg-muted relative isolate aspect-4/3 overflow-hidden lg:aspect-auto lg:min-h-120">
-                  <Image
-                    fill
-                    src={story.image}
-                    alt={story.imageAlt}
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-cover"
-                  />
+                <Image
+                  fill
+                  src={story.image}
+                  alt={story.imageAlt}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
 
               <div className="flex min-h-72 flex-col justify-center p-6 sm:p-10 lg:min-h-120 lg:p-12 xl:p-16">

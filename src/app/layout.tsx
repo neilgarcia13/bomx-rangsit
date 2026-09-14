@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Barlow_Condensed } from "next/font/google";
 
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 
 import "./globals.css";
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
