@@ -1,3 +1,4 @@
+import CommunityStorySection from "@/components/community-story-section";
 import FeaturedProductsSection from "@/components/featured-products-section";
 import FindPartsSection from "@/components/find-parts-section";
 import HeroSection from "@/components/hero-section";
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedProductsSection />
       <FindPartsSection />
       <NewReleasesSection />
+      <CommunityStorySection />
     </main>
   );
 }

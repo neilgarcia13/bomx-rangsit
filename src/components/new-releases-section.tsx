@@ -32,7 +32,7 @@ const NewReleasesSection = () => {
 
           <Link
             href="/products"
-            className="group/view-all text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-card hidden shrink-0 items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none sm:inline-flex"
+            className="group/view-all text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-card hidden shrink-0 items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors sm:inline-flex"
           >
             View All Products
             <ArrowUpRight
@@ -44,13 +44,11 @@ const NewReleasesSection = () => {
 
         <div className="grid gap-4 md:grid-cols-2">
           {newReleaseProducts.map((product) => {
-            const primaryImage = product.images[0];
-
             return (
               <article key={product.id}>
                 <Link
                   href={`/products/${product.slug}`}
-                  className="group/product border-border bg-background focus-visible:ring-ring focus-visible:ring-offset-card grid h-full grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] overflow-hidden rounded-xl border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                  className="group/product border-border bg-background focus-visible:ring-ring focus-visible:ring-offset-card grid h-full grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] overflow-hidden rounded-xl border"
                 >
                   <div className="bg-muted relative isolate min-h-48 overflow-hidden border-r">
                     <Image
@@ -98,7 +96,7 @@ const NewReleasesSection = () => {
 
         <Link
           href="/products"
-          className="text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-card mt-7 inline-flex items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none sm:hidden"
+          className="text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-card mt-7 inline-flex items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors sm:hidden"
         >
           View All Products
           <ArrowUpRight aria-hidden="true" className="size-4" />
