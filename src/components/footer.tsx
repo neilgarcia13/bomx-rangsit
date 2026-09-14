@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const socialPlatforms = [
   {
@@ -18,9 +19,13 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-background/15 grid gap-10 border-b py-12 sm:grid-cols-2 sm:items-end sm:py-14">
           <div>
-            <p className="font-display text-primary text-5xl leading-none tracking-tight uppercase">
-              BOMX
-            </p>
+            <Image
+              src="/images/brand/bomx-logo.svg"
+              alt="BOMX"
+              width={1280}
+              height={1280}
+              className="size-28 object-contain"
+            />
             <p className="text-background/70 mt-3 text-sm leading-6">
               Basta sa kalsada, BOMX ay laging kasama. ❤️ <br />
               For every journey, BOMX has your back.
@@ -28,13 +33,17 @@ const Footer = () => {
           </div>
 
           <div className="sm:justify-self-end">
-            <p className="text-secondary text-xs font-semibold tracking-[0.18em] uppercase mb-3">
+            <p className="text-secondary mb-3 text-xs font-semibold tracking-[0.18em] uppercase">
               Follow Us
             </p>
             {socialPlatforms.map((platform) => (
-              <div key={platform.title} className="flex justify-start space-y-2 items-center gap-3">
+              <div key={platform.title} className="flex items-center justify-start gap-3 space-y-2">
                 <span className="text-sm font-medium">{platform.title}</span>
-                <a href={platform.link} target="_blank" className="text-background/50 text-xs hover:underline">
+                <a
+                  href={platform.link}
+                  target="_blank"
+                  className="text-background/50 text-xs hover:underline"
+                >
                   {platform.username}
                 </a>
               </div>
