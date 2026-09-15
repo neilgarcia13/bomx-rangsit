@@ -1,13 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
+import HeroTrackField from "./hero-track-field";
 
 import HeroProductMotion from "@/components/hero-product-motion";
+import HeroSlideshow from "@/components/hero-slideshow";
 import ScrollReveal from "@/components/scroll-reveal";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
     <section className="border-border relative isolate overflow-hidden border-b">
+      <HeroTrackField />
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:px-8 lg:py-20">
         <div className="lg:col-span-5">
           <ScrollReveal>
@@ -57,22 +59,9 @@ const HeroSection = () => {
                 aria-hidden="true"
                 className="bg-secondary absolute -bottom-14 -left-10 size-36 rounded-full sm:size-48"
               />
-              <div
-                aria-hidden="true"
-                className="bg-foreground absolute right-8 bottom-8 h-3 w-24 -rotate-6 sm:right-12 sm:bottom-12 sm:w-32"
-              />
 
-              <div className="absolute inset-6 z-10 grid place-items-center rounded-2xl p-6 sm:inset-16">
-                <div className="absolute inset-0 z-10 overflow-hidden rounded-2xl">
-                  <Image
-                    fill
-                    preload
-                    src="/images/hero/featured.webp"
-                    alt="BOMX custom motorcycle at a competition event"
-                    sizes="(min-width: 1024px) 54vw, 100vw"
-                    className="object-cover"
-                  />
-                </div>
+              <div className="absolute inset-6 z-10 grid place-items-center overflow-hidden rounded-2xl p-6 backdrop-blur-sm sm:inset-16">
+                <HeroSlideshow />
               </div>
             </div>
           </HeroProductMotion>
