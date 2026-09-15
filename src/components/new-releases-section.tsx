@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import ScrollReveal from "@/components/scroll-reveal";
 import { products } from "@/data/products";
 
 const priceFormatter = new Intl.NumberFormat("en-PH", {
@@ -43,53 +44,55 @@ const NewReleasesSection = () => {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          {newReleaseProducts.map((product) => {
+          {newReleaseProducts.map((product, index) => {
             return (
-              <article key={product.id}>
-                <Link
-                  href={`/products/${product.slug}`}
-                  className="group/product border-border bg-background focus-visible:ring-ring focus-visible:ring-offset-card grid h-full grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] overflow-hidden rounded-xl border"
-                >
-                  <div className="bg-muted relative isolate min-h-48 overflow-hidden border-r">
-                    <Image
-                      fill
-                      src={product.images[0]}
-                      alt="BOMX new release"
-                      sizes="(min-width: 768px) 22vw, 42vw"
-                      className="object-cover transition-transform duration-300 group-hover/product:scale-[1.05] sm:p-5"
-                    />
-                  </div>
-
-                  <div className="flex min-w-0 flex-col p-4 sm:p-6">
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                      <p className="text-primary text-[0.65rem] font-semibold tracking-[0.14em] uppercase">
-                        New Release
-                      </p>
-                      <span aria-hidden="true" className="bg-border size-1 rounded-full" />
-                      <p className="text-muted-foreground text-[0.65rem] font-semibold tracking-[0.12em] uppercase">
-                        {product.category}
-                      </p>
-                    </div>
-
-                    <h3 className="font-display text-foreground group-hover/product:text-primary mt-3 text-2xl leading-none tracking-tight uppercase transition-colors sm:text-3xl">
-                      {product.name}
-                    </h3>
-                    <p className="text-muted-foreground mt-2 text-xs sm:text-sm">
-                      {product.series}
-                    </p>
-
-                    <div className="border-border mt-auto flex items-center justify-between gap-3 border-t pt-4">
-                      <p className="text-foreground text-sm font-semibold sm:text-base">
-                        {priceFormatter.format(product.price.amount)}
-                      </p>
-                      <ArrowUpRight
-                        aria-hidden="true"
-                        className="text-foreground group-hover/product:text-primary size-5 shrink-0 transition-transform group-hover/product:translate-x-0.5 group-hover/product:-translate-y-0.5"
+              <ScrollReveal key={product.id} className="h-full" delay={index * 0.07}>
+                <article className="h-full">
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="group/product border-border bg-background focus-visible:ring-ring focus-visible:ring-offset-card grid h-full grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] overflow-hidden rounded-xl border"
+                  >
+                    <div className="bg-muted relative isolate min-h-48 overflow-hidden border-r">
+                      <Image
+                        fill
+                        src={product.images[0]}
+                        alt="BOMX new release"
+                        sizes="(min-width: 768px) 22vw, 42vw"
+                        className="object-cover transition-transform duration-300 group-hover/product:scale-[1.05] sm:p-5"
                       />
                     </div>
-                  </div>
-                </Link>
-              </article>
+
+                    <div className="flex min-w-0 flex-col p-4 sm:p-6">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                        <p className="text-primary text-[0.65rem] font-semibold tracking-[0.14em] uppercase">
+                          New Release
+                        </p>
+                        <span aria-hidden="true" className="bg-border size-1 rounded-full" />
+                        <p className="text-muted-foreground text-[0.65rem] font-semibold tracking-[0.12em] uppercase">
+                          {product.category}
+                        </p>
+                      </div>
+
+                      <h3 className="font-display text-foreground group-hover/product:text-primary mt-3 text-2xl leading-none tracking-tight uppercase transition-colors sm:text-3xl">
+                        {product.name}
+                      </h3>
+                      <p className="text-muted-foreground mt-2 text-xs sm:text-sm">
+                        {product.series}
+                      </p>
+
+                      <div className="border-border mt-auto flex items-center justify-between gap-3 border-t pt-4">
+                        <p className="text-foreground text-sm font-semibold sm:text-base">
+                          {priceFormatter.format(product.price.amount)}
+                        </p>
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          className="text-foreground group-hover/product:text-primary size-5 shrink-0 transition-transform group-hover/product:translate-x-0.5 group-hover/product:-translate-y-0.5"
+                        />
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              </ScrollReveal>
             );
           })}
         </div>

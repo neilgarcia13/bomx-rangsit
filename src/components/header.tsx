@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import MobileNavigation from "@/components/mobile-navigation";
+import ScrollProgress from "@/components/scroll-progress";
 
 const navigationLinks = [
   { href: "/#collections", label: "Collections" },
@@ -16,9 +17,10 @@ const Header = () => {
         <Link href="/">
           <Image
             src="/images/brand/bomx-logo.svg"
-            alt=""
+            alt="BOMX logo"
             width={1280}
             height={1280}
+            loading="eager"
             className="size-12 object-contain"
           />
         </Link>
@@ -37,6 +39,7 @@ const Header = () => {
 
         <MobileNavigation links={navigationLinks} />
       </div>
+      <ScrollProgress />
     </header>
   );
 };

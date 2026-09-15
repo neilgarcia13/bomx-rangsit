@@ -1,4 +1,5 @@
 import MotorcycleFinderForm from "@/components/motorcycle-finder-form";
+import ScrollReveal from "@/components/scroll-reveal";
 
 const FindPartsSection = () => {
   return (
@@ -6,15 +7,11 @@ const FindPartsSection = () => {
       id="find-your-parts"
       className="bg-foreground text-background relative isolate scroll-mt-16 overflow-hidden py-16 sm:py-20 lg:py-24"
     >
-      <div
-        className="bg-primary absolute -top-24 -left-28 size-80 rotate-12 rounded-[4rem] opacity-80 sm:size-96"
-      />
-      <div
-        className="bg-secondary absolute right-[12%] -bottom-16 size-36 rounded-full sm:size-48"
-      />
+      <div className="bg-primary absolute -top-24 -left-28 size-80 rotate-12 rounded-[4rem] opacity-80 sm:size-96" />
+      <div className="bg-secondary absolute right-[12%] -bottom-16 size-36 rounded-full sm:size-48" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8">
-        <div className="lg:col-span-6">
+        <ScrollReveal className="lg:col-span-6" direction="left">
           <p className="text-secondary mb-4 text-xs font-semibold tracking-[0.18em] uppercase">
             Find Your Parts
           </p>
@@ -27,16 +24,16 @@ const FindPartsSection = () => {
           <p className="text-background/70 mt-5 max-w-lg text-base leading-7 sm:text-lg">
             Choose your motorcycle to explore compatible BOMX upgrades.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="lg:col-span-6">
+        <ScrollReveal className="lg:col-span-6" delay={0.08} direction="right">
           <div className="border-background/15 bg-background text-foreground ml-auto max-w-xl rounded-xl border p-5 shadow-xl sm:p-7 lg:p-8">
             <p className="text-primary mb-5 text-xs font-semibold tracking-[0.16em] uppercase">
               Motorcycle selector
             </p>
             <MotorcycleFinderForm />
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

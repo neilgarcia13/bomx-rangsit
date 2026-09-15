@@ -1,6 +1,8 @@
 "use client";
 
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   Carousel,
@@ -24,11 +26,7 @@ type CommunityStoryCarouselProps = {
 
 const CommunityStoryCarousel = ({ stories }: CommunityStoryCarouselProps) => {
   return (
-    <Carousel
-      opts={{ align: "start" }}
-      aria-label="BOMX community stories"
-      className="mt-10 sm:mt-12"
-    >
+    <Carousel opts={{ align: "start" }} className="mt-10 sm:mt-12">
       <CarouselContent className="ml-0">
         {stories.map((story, index) => (
           <CarouselItem key={story.title} className="pl-0">
@@ -60,6 +58,33 @@ const CommunityStoryCarousel = ({ stories }: CommunityStoryCarouselProps) => {
                   <span className="text-muted-foreground ml-2 text-xs font-semibold tracking-[0.14em] uppercase">
                     {String(index + 1).padStart(2, "0")} / {String(stories.length).padStart(2, "0")}
                   </span>
+                </div>
+                <div className="mt-16 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
+                  <Link
+                    href="https://www.facebook.com/BomRangsitThailand"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group/view-all text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-background inline-flex shrink-0 items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors focus-visible:ring-2"
+                  >
+                    Message us on Facebook
+                    <ArrowUpRight
+                      aria-hidden="true"
+                      className="size-4 transition-transform group-hover/view-all:translate-x-0.5 group-hover/view-all:-translate-y-0.5"
+                    />
+                  </Link>
+
+                  <Link
+                    href="https://www.tiktok.com/@bomrangsitph"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group/view-all text-foreground hover:text-primary focus-visible:ring-ring focus-visible:ring-offset-background inline-flex shrink-0 items-center gap-2 rounded-sm text-sm font-semibold uppercase transition-colors focus-visible:ring-2"
+                  >
+                    Follow on TikTok
+                    <ArrowUpRight
+                      aria-hidden="true"
+                      className="size-4 transition-transform group-hover/view-all:translate-x-0.5 group-hover/view-all:-translate-y-0.5"
+                    />
+                  </Link>
                 </div>
               </div>
             </article>

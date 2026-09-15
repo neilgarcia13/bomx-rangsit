@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import ScrollReveal from "@/components/scroll-reveal";
+
 const socialPlatforms = [
   {
     title: "Facebook",
@@ -16,14 +18,15 @@ const socialPlatforms = [
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background mt-auto">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <ScrollReveal className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8" direction="none">
         <div className="border-background/15 grid gap-10 border-b py-12 sm:grid-cols-2 sm:items-end sm:py-14">
           <div>
             <Image
               src="/images/brand/bomx-logo.svg"
-              alt="BOMX"
+              alt="BOMX logo"
               width={1280}
               height={1280}
+              loading="eager"
               className="size-28 object-contain"
             />
             <p className="text-background/70 mt-3 text-sm leading-6">
@@ -54,7 +57,7 @@ const Footer = () => {
         <p className="text-background/50 py-6 text-xs leading-5">
           © 2026 BOMX — BOM Rangsit. All rights reserved.
         </p>
-      </div>
+      </ScrollReveal>
     </footer>
   );
 };

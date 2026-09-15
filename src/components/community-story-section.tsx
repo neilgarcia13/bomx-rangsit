@@ -1,4 +1,5 @@
 import CommunityStoryCarousel, { type CommunityStory } from "@/components/community-story-carousel";
+import ScrollReveal from "@/components/scroll-reveal";
 
 const communityStories: CommunityStory[] = [
   {
@@ -39,7 +40,7 @@ const CommunityStorySection = () => {
   return (
     <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <ScrollReveal className="max-w-3xl">
           <p className="text-primary mb-3 text-xs font-semibold tracking-[0.18em] uppercase">
             BOMX Community
           </p>
@@ -50,7 +51,7 @@ const CommunityStorySection = () => {
             From performance builds to community events, BOMX is shaped by the motorcycles and
             riders that put every component into action.
           </p>
-        </div>
+        </ScrollReveal>
 
         <CommunityStoryCarousel stories={communityStories} />
       </div>
