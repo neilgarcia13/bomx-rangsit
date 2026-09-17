@@ -72,7 +72,7 @@ const MotorcycleFinderForm = () => {
           </SelectTrigger>
           <SelectContent align="start" sideOffset={8}>
             {availableMotorcycles.map((motorcycle) => (
-              <SelectItem key={motorcycle.id} value={motorcycle.name}>
+              <SelectItem key={motorcycle.id} value={motorcycle.slug}>
                 {motorcycle.name}
               </SelectItem>
             ))}
@@ -84,7 +84,7 @@ const MotorcycleFinderForm = () => {
         type="submit"
         size="lg"
         disabled={!selectedMake || !selectedMotorcycle}
-        className="h-11 w-full uppercase cursor-pointer"
+        className="h-11 w-full cursor-pointer uppercase"
       >
         Find Compatible Parts
       </Button>

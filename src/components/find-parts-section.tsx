@@ -26,7 +26,7 @@ const FindPartsSection = () => {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal className="lg:col-span-6" delay={0.08} direction="right">
+        <ScrollReveal className="lg:col-span-6" delay={0.1} direction="right">
           <div className="border-background/15 bg-background text-foreground ml-auto max-w-xl rounded-xl border p-5 shadow-xl sm:p-7 lg:p-8">
             <p className="text-primary mb-5 text-xs font-semibold tracking-[0.16em] uppercase">
               Motorcycle selector

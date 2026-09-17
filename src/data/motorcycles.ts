@@ -9,12 +9,12 @@ export type Motorcycle = {
   slug: string;
 };
 
-export const motorcycles = [
+export const motorcycles: Motorcycle[] = [
   {
-    id: "honda-click-125i-150i",
+    id: "honda-click-125",
     make: "Honda",
-    name: "Click 125i / 150i",
-    slug: "honda-click-125i-150i",
+    name: "Click 125",
+    slug: "honda-click-125",
   },
   {
     id: "honda-click-160",
@@ -41,10 +41,10 @@ export const motorcycles = [
     slug: "yamaha-aerox-155-v1",
   },
   {
-    id: "yamaha-aerox-155-v2-v3",
+    id: "yamaha-aerox-155-v2",
     make: "Yamaha",
-    name: "Aerox 155 V2 / V3",
-    slug: "yamaha-aerox-155-v2-v3",
+    name: "Aerox 155 V2",
+    slug: "yamaha-aerox-155-v2",
   },
   {
     id: "yamaha-nmax-155-v1",
@@ -58,4 +58,4 @@ export const motorcycles = [
     name: "NMAX 155 V2",
     slug: "yamaha-nmax-155-v2",
   },
-] as const satisfies readonly Motorcycle[];
+];

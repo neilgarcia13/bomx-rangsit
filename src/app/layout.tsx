@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${barlowCondensed.variable} ${geist.variable} h-full antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${barlowCondensed.variable} ${geist.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <MotionProvider>
           <Header />
