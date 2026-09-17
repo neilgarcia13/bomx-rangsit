@@ -276,7 +276,6 @@ The website must have no more than these three page types:
 
 Sections such as About, Collections, and motorcycle discovery should live within the homepage or products experience.
 
-
 # Typography
 
 Typography is finalized.
@@ -488,5 +487,3 @@ Prefer:
 - No unnecessary dependencies
 
 Do not introduce heavy animation or client-state infrastructure for decorative purposes.
-
-

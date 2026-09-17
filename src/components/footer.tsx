@@ -1,17 +1,20 @@
 import Image from "next/image";
 
 import ScrollReveal from "@/components/scroll-reveal";
+import { FacebookIcon, TiktokIcon } from "@/components/social-icons";
 
 const socialPlatforms = [
   {
     title: "Facebook",
     link: "https://www.facebook.com/BomRangsitThailand",
     username: "@BomRangsitThailand",
+    icon: FacebookIcon,
   },
   {
     title: "TikTok",
     link: "https://www.tiktok.com/@bomrangsitph",
     username: "@bomrangsitph",
+    icon: TiktokIcon,
   },
 ];
 
@@ -36,21 +39,35 @@ const Footer = () => {
           </div>
 
           <div className="sm:justify-self-end">
-            <p className="text-secondary mb-3 text-xs font-semibold tracking-[0.18em] uppercase">
+            <p className="text-secondary mb-4 text-xs font-semibold tracking-[0.18em] uppercase">
               Follow Us
             </p>
-            {socialPlatforms.map((platform) => (
-              <div key={platform.title} className="flex items-center justify-start gap-3 space-y-2">
-                <span className="text-sm font-medium">{platform.title}</span>
-                <a
-                  href={platform.link}
-                  target="_blank"
-                  className="text-background/50 text-xs hover:underline"
-                >
-                  {platform.username}
-                </a>
-              </div>
-            ))}
+            <ul className="space-y-3">
+              {socialPlatforms.map((platform) => {
+                const Icon = platform.icon;
+
+                return (
+                  <li key={platform.title}>
+                    <a
+                      href={platform.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group focus-visible:ring-secondary focus-visible:ring-offset-foreground -m-1 flex items-center gap-3 rounded-md p-1 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+                    >
+                      <span className="bg-background/10 text-background group-hover:bg-primary group-hover:text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-lg transition-colors">
+                        <Icon className="size-4.5" />
+                      </span>
+                      <span className="flex min-w-0 flex-col">
+                        <span className="text-sm font-medium">{platform.title}</span>
+                        <span className="text-background/50 group-hover:text-background/80 text-xs transition-colors">
+                          {platform.username}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
 

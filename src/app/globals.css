@@ -126,7 +126,7 @@ html {
   html {
     scroll-behavior: auto;
   }
-} 
+}
 
 @layer base {
   * {

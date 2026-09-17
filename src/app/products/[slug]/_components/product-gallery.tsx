@@ -58,7 +58,13 @@ const ProductGallery = ({ productName, images }: ProductGalleryProps) => {
                 selectedIndex === index && "border-foreground ring-foreground ring-1",
               )}
             >
-              <Image fill src={image} alt="Product image" sizes="80px" className="object-contain p-1" />
+              <Image
+                fill
+                src={image}
+                alt="Product image"
+                sizes="80px"
+                className="object-contain p-1"
+              />
             </button>
           ))}
         </div>

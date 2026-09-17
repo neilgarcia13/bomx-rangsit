@@ -40,7 +40,7 @@ const MobileNavigation = ({ links }: MobileNavigationProps) => {
                 key={link.href}
                 href={link.href}
                 onNavigate={() => setOpen(false)}
-                className="text-popover-foreground uppercase hover:bg-muted hover:text-primary focus-visible:ring-ring rounded-md px-3 py-3 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset"
+                className="text-popover-foreground hover:bg-muted hover:text-primary focus-visible:ring-ring rounded-md px-3 py-3 text-sm font-medium uppercase transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset"
               >
                 {link.label}
               </Link>

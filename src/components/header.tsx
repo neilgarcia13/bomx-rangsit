@@ -8,6 +8,7 @@ const navigationLinks = [
   { href: "/#collections", label: "Collections" },
   { href: "/#find-your-parts", label: "Find Your Parts" },
   { href: "/products", label: "Products" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 const Header = () => {
