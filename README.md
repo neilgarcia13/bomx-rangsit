@@ -1,47 +1,24 @@
-# Neil Andrei's Next.js Template
+# BOMX - BOM Rangsit
 
-A lightweight personal template for building Next.js applications with a consistent structure and coding style.
+A static motorcycle-parts catalog featuring product discovery, motorcycle compatibility filtering, and individual product pages.
 
 ## Stack
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- ESLint
-- Prettier
-- pnpm
+Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, and Motion.
 
-## Getting Started
-
-Install the dependencies:
+## Development
 
 ```bash
 pnpm install
-```
-
-Start the development server:
-
-```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-The main page is located at `src/app/page.tsx`.
+## Validation
 
-## Scripts
-
-```bashpnpm dev
-pnpm build
-pnpm start
-pnpm lint
+```bash
 pnpm type-check
-pnpm format
-pnpm format:check
+pnpm lint
+pnpm build
 ```
-
-## Project Conventions
-
-See [project-conventions.md](./project-conventions.md) for the project structure, naming conventions, and coding preferences used by this template.
