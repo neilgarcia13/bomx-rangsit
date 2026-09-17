@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import HeroTrackField from "@/components/hero-track-field";
 import { products } from "@/data/products";
 
+import CatalogContact from "./_components/catalog-contact";
 import ProductCatalog from "./_components/product-catalog";
 
 const ProductsPage = () => {
@@ -27,6 +28,7 @@ const ProductsPage = () => {
           <Suspense fallback={null}>
             <ProductCatalog products={products} />
           </Suspense>
+          <CatalogContact />
         </div>
       </section>
     </main>
