@@ -1,9 +1,26 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { products } from "@/data/products";
 import ProductDetails from "./_components/product-details";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
+};
+
+export const generateMetadata = async ({ params }: ProductPageProps): Promise<Metadata> => {
+  const { slug } = await params;
+  const product = products.find((product) => product.slug === slug);
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+    };
+  }
+
+  return {
+    title: product.name,
+    description: product.description,
+  };
 };
 
 export const generateStaticParams = () =>

@@ -1,10 +1,17 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 
 import HeroTrackField from "@/components/hero-track-field";
 import { products } from "@/data/products";
 
 import CatalogContact from "./_components/catalog-contact";
 import ProductCatalog from "./_components/product-catalog";
+
+export const metadata: Metadata = {
+  title: "Products",
+  description:
+    "Browse BOMX motorcycle upgrades, including braking, suspension, controls, exhaust, and accessories.",
+};
 
 const ProductsPage = () => {
   return (

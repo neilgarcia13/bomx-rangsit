@@ -21,13 +21,35 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template made by Neil Andrei",
-  description: "A personal Next.js template built with TypeScript, Tailwind CSS, and shadcn/ui.",
+  title: {
+    default: "BOMX — BOM Rangsit",
+    template: "%s | BOMX",
+  },
+  description:
+    "Explore BOMX motorcycle parts built for performance, control, and distinctive custom builds.",
+  keywords: [
+    "BOMX",
+    "BOM Rangsit",
+    "BOMX Philippines",
+    "motorcycle parts Philippines",
+    "aftermarket motorcycle parts",
+    "motorcycle performance parts",
+    "scooter performance parts",
+    "motorcycle brake parts",
+  ],
+  authors: [{ name: "BOMX — BOM Rangsit" }],
+  creator: "BOMX — BOM Rangsit",
+  robots: { index: true, follow: true },
+  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${barlowCondensed.variable} ${geist.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${barlowCondensed.variable} ${geist.variable} h-full antialiased`}
+    >
       <body className="flex min-h-full flex-col">
         <MotionProvider>
           <Header />
