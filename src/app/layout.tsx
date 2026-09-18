@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Barlow_Condensed } from "next/font/google";
 
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import MotionProvider from "@/components/motion-provider";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
+import MotionProvider from "@/components/motion/motion-provider";
 
 import "./globals.css";
 

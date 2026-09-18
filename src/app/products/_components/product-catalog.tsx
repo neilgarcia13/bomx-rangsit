@@ -24,24 +24,10 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { motorcycles } from "@/data/motorcycles";
-import type { Product } from "@/data/products";
-import { cn } from "@/lib/utils";
+import { cn, createCategorySlug, formatPrice } from "@/lib/utils";
+import type { Product } from "@/types/product";
 
 const productsPerPage = 8;
-
-const priceFormatter = new Intl.NumberFormat("en-PH", {
-  style: "currency",
-  currency: "PHP",
-  currencyDisplay: "narrowSymbol",
-  maximumFractionDigits: 0,
-});
-
-const createCategorySlug = (category: string) =>
-  category
-    .toLowerCase()
-    .replaceAll("&", "and")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
 
 type ProductCatalogProps = {
   products: Product[];
@@ -250,7 +236,7 @@ const ProductCatalog = ({ products }: ProductCatalogProps) => {
 
                     <div className="border-border mt-5 flex items-center justify-between gap-4 border-t pt-4">
                       <p className="text-foreground font-semibold">
-                        {priceFormatter.format(product.price.amount)}
+                        {formatPrice(product.price.amount)}
                       </p>
                       <ArrowUpRight
                         aria-hidden="true"

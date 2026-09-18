@@ -2,19 +2,12 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import { motorcycles } from "@/data/motorcycles";
-import type { Product } from "@/data/products";
+import { formatPrice } from "@/lib/utils";
+import type { Product } from "@/types/product";
 
 import ProductGallery from "./product-gallery";
 import CatalogContact from "../../_components/catalog-contact";
-
-const priceFormatter = new Intl.NumberFormat("en-PH", {
-  style: "currency",
-  currency: "PHP",
-  currencyDisplay: "narrowSymbol",
-  maximumFractionDigits: 0,
-});
 
 type RelatedProductsProps = {
   products: Product[];
@@ -67,7 +60,7 @@ const RelatedProducts = ({ products }: RelatedProductsProps) => {
                   </h3>
                   <div className="border-border mt-5 flex items-center justify-between gap-4 border-t pt-4">
                     <p className="text-foreground font-semibold">
-                      {priceFormatter.format(product.price.amount)}
+                      {formatPrice(product.price.amount)}
                     </p>
                     <ArrowUpRight
                       aria-hidden="true"
@@ -120,7 +113,7 @@ const ProductDetails = ({ product, relatedProducts }: ProductDetailsProps) => {
             {product.series}
           </p>
           <p className="text-foreground mt-6 text-2xl font-semibold">
-            {priceFormatter.format(product.price.amount)}
+            {formatPrice(product.price.amount)}
           </p>
 
           <div className="border-border mt-8 border-t pt-8">

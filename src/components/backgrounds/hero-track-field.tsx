@@ -31,7 +31,7 @@ const HeroTrackField = ({ variant = "hero" }: HeroTrackFieldProps) => {
     >
       <div
         className={cn(
-          "absolute inset-0 [background-image:linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [mask-image:linear-gradient(to_bottom,black_0%,black_72%,transparent_100%)] [background-size:48px_48px]",
+          "absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-size-[48px_48px]",
           isCatalog ? "opacity-20" : "opacity-35",
         )}
       />
@@ -40,8 +40,8 @@ const HeroTrackField = ({ variant = "hero" }: HeroTrackFieldProps) => {
         className={cn(
           "absolute top-1/2 -translate-y-1/2 -rotate-12 rounded-[50%] will-change-transform",
           isCatalog
-            ? "border-primary/6 -left-40 h-72 w-[30rem] border-[2rem] sm:-left-28 sm:h-80 sm:w-[38rem]"
-            : "border-primary/10 -left-80 h-[38rem] w-[50rem] border-[3.5rem] sm:-left-64 sm:h-[44rem] sm:w-[58rem]",
+            ? "border-primary/6 -left-40 h-72 w-120 border-[2rem] sm:-left-28 sm:h-80 sm:w-152"
+            : "border-primary/10 -left-80 h-152 w-200 border-[3.5rem] sm:-left-64 sm:h-176 sm:w-232",
         )}
         style={{
           x: shouldReduceMotion ? 0 : arcX,

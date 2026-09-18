@@ -1,22 +1,6 @@
 import Image from "next/image";
-
-import ScrollReveal from "@/components/scroll-reveal";
-import { FacebookIcon, TiktokIcon } from "@/components/social-icons";
-
-const socialPlatforms = [
-  {
-    title: "Facebook",
-    link: "https://www.facebook.com/BomRangsitThailand",
-    username: "@BomRangsitThailand",
-    icon: FacebookIcon,
-  },
-  {
-    title: "TikTok",
-    link: "https://www.tiktok.com/@bomrangsitph",
-    username: "@bomrangsitph",
-    icon: TiktokIcon,
-  },
-];
+import ScrollReveal from "@/components/motion/scroll-reveal";
+import { socialPlatforms } from "@/data/social-links";
 
 const Footer = () => {
   return (

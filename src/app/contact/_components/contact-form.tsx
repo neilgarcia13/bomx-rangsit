@@ -1,7 +1,6 @@
 "use client";
 
 import type { SubmitEvent } from "react";
-import { Send } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -93,9 +92,8 @@ const ContactForm = () => {
           />
         </div>
 
-        <Button type="submit" size="lg" className="h-11 w-full cursor-pointer gap-2 px-6 uppercase">
-          Send
-          <Send />
+        <Button type="submit" size="lg" className="h-11 w-full cursor-pointer uppercase">
+          Send Message
         </Button>
       </form>
     </div>

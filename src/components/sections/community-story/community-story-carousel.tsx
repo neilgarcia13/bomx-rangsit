@@ -11,14 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-type CommunityStory = {
-  label: string;
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-};
+import type { CommunityStory } from "@/types/content";
 
 type CommunityStoryCarouselProps = {
   stories: CommunityStory[];
@@ -96,4 +89,3 @@ const CommunityStoryCarousel = ({ stories }: CommunityStoryCarouselProps) => {
 };
 
 export default CommunityStoryCarousel;
-export type { CommunityStory };

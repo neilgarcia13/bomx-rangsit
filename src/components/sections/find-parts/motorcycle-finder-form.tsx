@@ -12,7 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { motorcycleMakes, motorcycles, type MotorcycleMake } from "@/data/motorcycles";
+import { motorcycleMakes, motorcycles } from "@/data/motorcycles";
+import type { MotorcycleMake } from "@/types/motorcycle";
 
 const MotorcycleFinderForm = () => {
   const router = useRouter();

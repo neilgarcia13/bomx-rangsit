@@ -4,25 +4,9 @@ import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 
-const slideDuration = 5000;
+import { heroSlides } from "@/data/hero-slides";
 
-const heroSlides = [
-  {
-    src: "/images/hero/featured-1.webp",
-    alt: "BOMX custom motorcycle at a competition event",
-    objectPosition: "center",
-  },
-  {
-    src: "/images/hero/featured-2.webp",
-    alt: "BOMX custom performance motorcycle",
-    objectPosition: "center",
-  },
-  {
-    src: "/images/hero/featured-3.webp",
-    alt: "BOMX-equipped custom motorcycle",
-    objectPosition: "center",
-  },
-] as const;
+const slideDuration = 5000;
 
 const HeroSlideshow = () => {
   const shouldReduceMotion = useReducedMotion();

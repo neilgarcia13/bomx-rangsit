@@ -23,7 +23,7 @@ const MobileNavigation = ({ links }: MobileNavigationProps) => {
           aria-controls="mobile-navigation"
           aria-expanded={open}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          className="text-foreground hover:bg-muted focus-visible:ring-ring focus-visible:ring-offset-background inline-flex size-10 items-center justify-center rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          className="text-foreground hover:bg-muted focus-visible:ring-ring focus-visible:ring-offset-background inline-flex size-10 items-center justify-center rounded-md transition-colors"
         >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </PopoverTrigger>
@@ -40,7 +40,7 @@ const MobileNavigation = ({ links }: MobileNavigationProps) => {
                 key={link.href}
                 href={link.href}
                 onNavigate={() => setOpen(false)}
-                className="text-popover-foreground hover:bg-muted hover:text-primary focus-visible:ring-ring rounded-md px-3 py-3 text-sm font-medium uppercase transition-colors focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset"
+                className="text-popover-foreground hover:bg-muted hover:text-primary focus-visible:ring-ring rounded-md px-3 py-3 text-sm font-medium uppercase transition-colors"
               >
                 {link.label}
               </Link>

@@ -1,9 +1,9 @@
 import Link from "next/link";
-import HeroTrackField from "./hero-track-field";
+import HeroTrackField from "../../backgrounds/hero-track-field";
 
-import HeroProductMotion from "@/components/hero-product-motion";
-import HeroSlideshow from "@/components/hero-slideshow";
-import ScrollReveal from "@/components/scroll-reveal";
+import HeroProductMotion from "@/components/sections/hero/hero-product-motion";
+import HeroSlideshow from "@/components/sections/hero/hero-slideshow";
+import ScrollReveal from "@/components/motion/scroll-reveal";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -52,11 +52,9 @@ const HeroSection = () => {
           <HeroProductMotion>
             <div className="border-border bg-muted relative isolate aspect-4/3 overflow-hidden rounded-xl border shadow-lg sm:aspect-5/4">
               <div
-                aria-hidden="true"
                 className="bg-primary absolute -top-20 -right-16 size-72 rotate-12 rounded-[3rem] sm:size-96"
               />
               <div
-                aria-hidden="true"
                 className="bg-secondary absolute -bottom-14 -left-10 size-36 rounded-full sm:size-48"
               />
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import HeroTrackField from "@/components/hero-track-field";
-import ScrollReveal from "@/components/scroll-reveal";
+import HeroTrackField from "@/components/backgrounds/hero-track-field";
+import ScrollReveal from "@/components/motion/scroll-reveal";
 
 import ContactDetails from "./_components/contact-details";
 import ContactForm from "./_components/contact-form";
@@ -20,9 +20,6 @@ const ContactPage = () => {
           <HeroTrackField variant="catalog" />
 
           <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="text-primary text-xs font-semibold tracking-[0.18em] uppercase">
-              Contact
-            </p>
             <h1 className="font-display text-foreground mt-3 text-5xl leading-none tracking-tight uppercase sm:text-6xl lg:text-7xl">
               Let’s talk parts.
             </h1>
@@ -34,12 +31,12 @@ const ContactPage = () => {
         </header>
 
         <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-20">
-          <ScrollReveal className="lg:col-span-5" direction="left">
-            <ContactDetails />
+          <ScrollReveal className="lg:col-span-7" direction="left">
+            <ContactForm />
           </ScrollReveal>
 
-          <ScrollReveal className="lg:col-span-7" delay={0.1} direction="right">
-            <ContactForm />
+          <ScrollReveal className="lg:col-span-5" delay={0.1} direction="right">
+            <ContactDetails />
           </ScrollReveal>
         </div>
       </section>

@@ -2,15 +2,9 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import ScrollReveal from "@/components/scroll-reveal";
+import ScrollReveal from "@/components/motion/scroll-reveal";
 import { products } from "@/data/products";
-
-const priceFormatter = new Intl.NumberFormat("en-PH", {
-  style: "currency",
-  currency: "PHP",
-  currencyDisplay: "narrowSymbol",
-  maximumFractionDigits: 0,
-});
+import { formatPrice } from "@/lib/utils";
 
 const NewReleasesSection = () => {
   const newReleaseProducts = products.filter((product) => product.newRelease).slice(0, 4);
@@ -82,7 +76,7 @@ const NewReleasesSection = () => {
 
                       <div className="border-border mt-auto flex items-center justify-between gap-3 border-t pt-4">
                         <p className="text-foreground text-sm font-semibold sm:text-base">
-                          {priceFormatter.format(product.price.amount)}
+                          {formatPrice(product.price.amount)}
                         </p>
                         <ArrowUpRight
                           aria-hidden="true"

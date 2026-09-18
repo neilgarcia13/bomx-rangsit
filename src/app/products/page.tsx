@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 
-import HeroTrackField from "@/components/hero-track-field";
+import HeroTrackField from "@/components/backgrounds/hero-track-field";
 import { products } from "@/data/products";
 
 import CatalogContact from "./_components/catalog-contact";

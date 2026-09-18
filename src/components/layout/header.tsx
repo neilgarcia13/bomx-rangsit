@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import MobileNavigation from "@/components/mobile-navigation";
-import ScrollProgress from "@/components/scroll-progress";
+import MobileNavigation from "@/components/layout/mobile-navigation";
+import ScrollProgress from "@/components/layout/scroll-progress";
 
 const navigationLinks = [
   { href: "/#collections", label: "Collections" },

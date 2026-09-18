@@ -1,63 +1,9 @@
-import { Mail, MapPin, Phone } from "lucide-react";
-
-import { FacebookIcon, TiktokIcon } from "@/components/social-icons";
-
-const toTelHref = (phoneNumber: string) => `tel:+63${phoneNumber.replace(/\D/g, "").slice(1)}`;
-
-const contactChannels = [
-  {
-    label: "Globe",
-    icon: Phone,
-    entries: ["0945-624-8002", "0945-526-6420"].map((phoneNumber) => ({
-      value: phoneNumber,
-      href: toTelHref(phoneNumber),
-    })),
-  },
-  {
-    label: "Smart",
-    icon: Phone,
-    entries: ["0960-560-5856", "0928-148-0731"].map((phoneNumber) => ({
-      value: phoneNumber,
-      href: toTelHref(phoneNumber),
-    })),
-  },
-  {
-    label: "Email",
-    icon: Mail,
-    entries: [{ value: "bomxrangsit@gmail.com", href: "mailto:bomxrangsit@gmail.com" }],
-  },
-  {
-    label: "Address",
-    icon: MapPin,
-    entries: [{ value: "Panipuan, Mexico, Pampanga", href: undefined }],
-  },
-];
-
-const socialPlatforms = [
-  {
-    title: "Facebook",
-    link: "https://www.facebook.com/BomRangsitThailand",
-    username: "@BomRangsitThailand",
-    icon: FacebookIcon,
-  },
-  {
-    title: "TikTok",
-    link: "https://www.tiktok.com/@bomrangsitph",
-    username: "@bomrangsitph",
-    icon: TiktokIcon,
-  },
-];
+import { contactChannels } from "@/data/contact-channels";
+import { socialPlatforms } from "@/data/social-links";
 
 const ContactDetails = () => {
   return (
     <div>
-      <h2 className="font-display text-foreground text-4xl leading-none tracking-tight uppercase sm:text-5xl">
-        Contact With Us
-      </h2>
-      <p className="text-muted-foreground mt-4 max-w-md text-sm leading-6">
-        Reach the BOMX Rangsit team directly for availability, pricing, and fitment questions.
-      </p>
-
       <ul className="mt-8 space-y-6">
         {contactChannels.map((channel) => {
           const Icon = channel.icon;
@@ -65,7 +11,7 @@ const ContactDetails = () => {
           return (
             <li key={channel.label} className="flex items-start gap-4">
               <span className="bg-accent text-primary flex size-11 shrink-0 items-center justify-center rounded-lg">
-                <Icon className="size-5" aria-hidden="true" />
+                <Icon className="size-5" />
               </span>
               <div className="min-w-0">
                 <p className="text-muted-foreground text-xs font-medium tracking-[0.14em] uppercase">
@@ -77,7 +23,7 @@ const ContactDetails = () => {
                       <a
                         key={entry.value}
                         href={entry.href}
-                        className="text-foreground hover:text-primary focus-visible:ring-ring block rounded-sm text-base font-medium break-words transition-colors focus-visible:ring-2 focus-visible:outline-none"
+                        className="text-foreground hover:text-primary focus-visible:ring-ring block rounded-sm text-base font-medium wrap-break-word transition-colors focus-visible:ring-2 focus-visible:outline-none"
                       >
                         {entry.value}
                       </a>

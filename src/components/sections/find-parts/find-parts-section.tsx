@@ -1,5 +1,5 @@
-import MotorcycleFinderForm from "@/components/motorcycle-finder-form";
-import ScrollReveal from "@/components/scroll-reveal";
+import MotorcycleFinderForm from "@/components/sections/find-parts/motorcycle-finder-form";
+import ScrollReveal from "@/components/motion/scroll-reveal";
 
 const FindPartsSection = () => {
   return (

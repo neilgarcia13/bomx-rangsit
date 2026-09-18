@@ -1,9 +1,9 @@
-import CommunityStorySection from "@/components/community-story-section";
-import FeaturedProductsSection from "@/components/featured-products-section";
-import FindPartsSection from "@/components/find-parts-section";
-import HeroSection from "@/components/hero-section";
-import NewReleasesSection from "@/components/new-releases-section";
-import ShopByCategorySection from "@/components/shop-by-category-section";
+import CommunityStorySection from "@/components/sections/community-story/community-story-section";
+import FeaturedProductsSection from "@/components/sections/featured-products/featured-products-section";
+import FindPartsSection from "@/components/sections/find-parts/find-parts-section";
+import HeroSection from "@/components/sections/hero/hero-section";
+import NewReleasesSection from "@/components/sections/new-releases/new-releases-section";
+import ShopByCategorySection from "@/components/sections/shop-by-category/shop-by-category-section";
 
 export default function Home() {
   return (

@@ -1,13 +1,6 @@
-export const motorcycleMakes = ["Honda", "Yamaha"] as const;
+import type { Motorcycle, MotorcycleMake } from "@/types/motorcycle";
 
-export type MotorcycleMake = (typeof motorcycleMakes)[number];
-
-export type Motorcycle = {
-  id: string;
-  make: MotorcycleMake;
-  name: string;
-  slug: string;
-};
+export const motorcycleMakes: MotorcycleMake[] = ["Honda", "Yamaha"];
 
 export const motorcycles: Motorcycle[] = [
   {
